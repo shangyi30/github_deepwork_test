@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react"
 import { Pause, Play, RotateCcw, Square } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -41,8 +41,14 @@ export function DeepWorkTimer() {
   const [storageError, setStorageError] = useState<string | null>(null)
   const [customError, setCustomError] = useState<string | null>(null)
   const tickRef = useRef<number | null>(null)
+  const isClient = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
 
-  useEffect(() => {
+  if (isClient && !hydrated) {
+    setHydrated(true)
     try {
       setSessions(loadSessions())
       setStorageError(null)
@@ -50,10 +56,8 @@ export function DeepWorkTimer() {
       setStorageError(
         error instanceof Error ? error.message : "无法读取本地会话记录"
       )
-    } finally {
-      setHydrated(true)
     }
-  }, [])
+  }
 
   useEffect(() => {
     if (phase !== "running") {
