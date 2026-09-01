@@ -9,7 +9,7 @@ export default function Home() {
             <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
               Deep Work
             </p>
-            <h1 className="text-lg font-medium">github_deepwork</h1>
+            <h1 className="text-lg font-medium">github_deepwork_test</h1>
           </div>
           <p className="hidden text-sm text-muted-foreground sm:block">
             一次只做一件事

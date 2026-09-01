@@ -1,4 +1,6 @@
-# github_deepwork
+# github_deepwork_test
+
+GitHub 仓库：[shangyi30/github_deepwork_test](https://github.com/shangyi30/github_deepwork_test)
 
 一段不被打断的深度工作计时器。写下这一段要完成的事，选 25 / 50 / 90 分钟（或自定义），开始后只做这一件。
 

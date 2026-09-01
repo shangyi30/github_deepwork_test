@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "github_deepwork",
+  title: "github_deepwork_test",
   description: "一段不被打断的深度工作计时器。写下意图，选好时长，然后开始。",
 }
 

@@ -221,7 +221,7 @@ export function DeepWorkTimer() {
       <Card className="overflow-hidden">
         <CardHeader className="gap-3">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary">github_deepwork</Badge>
+            <Badge variant="secondary">github_deepwork_test</Badge>
             <Badge variant={phase === "running" ? "default" : "outline"}>
               {phase === "running"
                 ? "进行中"
